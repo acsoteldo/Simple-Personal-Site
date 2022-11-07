@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+    <title>CS2012 Website</title>
+        <style>
+        body {
+            padding-top: 75px;
+            font-family: Helvetica;
+            color: rgb(48, 25, 52);
+            background-color:rgb(255, 255, 255);
+        }
+        html {
+            scroll-padding-top: 50px; 
+            width: 100%;
+        }
+        .navbar {
+            border: none; 
+            overflow:hidden; 
+            flex-direction: row; 
+            justify-content: center;  
+            float:left; 
+            background-color: rgb(240, 240, 240);
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+            display: flex; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            z-index: 100;
+        }
+        .navbar a {
+            float:left; 
+            display: block; 
+            color: rgb(48, 25, 52);
+            text-align: center; 
+            padding: 25px; 
+            font-size: 20px; 
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: rgba(165, 227, 235, 0.992);
+            color: rgb(255, 255, 255);
+        }
+        h1 {
+            color: rgb(48, 25, 52);
+            position: relative;
+            left: 0em;
+            padding-top: 50px; 
+            width:90%; 
+        }
+        h2 {
+            color: rgb(48, 25, 52);
+            position: relative;
+            left: 4em;
+            padding-top: 50px; 
+            width:90%; 
+        }
+        .emph {
+            font-style: italic; 
+            color: GoldenRod;
+        }
+        .home_section {
+            float: center;
+            width:75%; 
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        #ucc_logo {
+            float: left; 
+            margin: 0px; 
+            top:0; 
+            left:0;
+        }
+        .intro_section {
+            text-align: justify;
+            margin: 0px; 
+            top:0; 
+            left:0;
+        }
+        .timetable_section {
+            padding:10px; 
+            clear:left;
+        }
+        table {
+            width:75%; 
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        th {
+            background-color: rgba(165, 227, 235, 0.992);
+            margin: 0px;
+        }
+        tr:nth-child(even) {
+            background-color: rgb(240, 240, 240);
+            margin: 0px;
+        }
+        tr:nth-child(odd) {
+            background-color: rgb(180, 180, 180);
+            margin: 0px;
+        }
+        th, td {
+            padding:10px; 
+            border: 1px solid rgb(0, 0, 0);
+            margin: 0px;
+        }
+        .photos {
+            clear: left; 
+            margin-left: auto; 
+            margin-right: auto; 
+            display: block; 
+            width: 100%; 
+            margin-top: 50px; 
+            margin-bottom:50px
+        }
+        #home_pic, #cork_pic {
+            margin-left: auto; 
+            margin-right: auto; 
+            display: block; 
+            width: 75%;
+            height: auto;
+            margin-top: 50px; 
+            margin-bottom:50px;
+        }
+        .description, .caption {
+            text-align: center; 
+        }
+    </style>  
+</head>
+
+<!--Lab 4: 
+
+    1. edit text-input found directly in HTML, (hard code)
+    2. edit URL https://www.xe.com/currencyconverter/convert/?Amount=85&From=GBP&To=EUR
+    A HTML form provides a way of creating a request with user supplied query parameters.
+
+-->
+
+<body>
+    <div class="navbar">
+    <!--add nav with 5 sections, scroll, margin-top
+    href="#photo1"-->
+        <div><a href="#intro_section">Home</a></div>
+        <div><a href="#class_timetable">Class Timetable</a></div>
+        <div><a href="#lab_timetable">Lab Timetable</a></div>
+        <div><a href="#home_photo">Home Photo</a></div>
+        <div><a href="#cork_photo">Other Photo</a></div>
+    </div>
+
+    <div class="main_content">
+        <div class="home_section">
+            <img id="ucc_logo" src="https://www.ucc.ie/en/media/discoverucc/timeline/8HeraldicCrest.jpg" alt="ucc_logo" width="125">
+            <h1 id="intro_section">Introduction</h1>
+            <p>Hi, I&rsquo;m <strong>Andre</strong>!</p>
+            <p>I am a visiting student from the United States, though originally from Venezuela&#128516;. I am graduating in 2023 with a Bachelor's degree in Computer Science.<br>
+            In my spare time, I love <span class="emph">creating art</span>, <span class="emph">writing stories</span>, wandering the outdoors(<span class="emph">travelling</span>), and watching anime/animated series. I also enjoy reading.</p>
+        </div>
+    
+       <div class="timetable_section">
+           <h2 id="class_timetable">Class Timetable</h2>
+           <table cellpadding="4">
+               <tbody><tr>
+                   <th>Code</th>
+                   <th>Title</th>
+                   <th>Weekday</th>
+                   <th>Time</th>
+                   <th>Activity</th>
+                   <th>Room Code</th>
+                </tr>
+                <!--Python-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules-visiting-student/?details&code=CS1068">CS1068</a></td>
+                <td>Introductory Programming in Python</td>
+                <td>Tuesday<br>Thursday</td>
+                <td>14:00 - 15:00 <br>14:00 - 15:00</td>
+                <td>Lecture<br>Lecture</td>
+                <td>BHSC G01<br>BHSC G05</td>
+                </tr>
+                
+                <!--Web Dev-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules/?details&amp;srcdb=2022&amp;code=CS2012">CS2012</a></td>
+                <td>Web Development</td>
+                <td>Tuesday<br>Wednesday</td>
+                <td>12:00 - 13:00<br>12:00 - 13:00</td>
+                <td>Lecture<br>Lecture</td>
+                <td>WGB G09<br>WGB G16</td>
+                </tr>
+
+                <!--Stat-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules-visiting-student/?details&code=ST2053">ST2053</a></td>
+                <td>Introduction to Regression Analysis</td>
+                <td>Tuesday<br>Thursday</td>
+                <td>16:00 - 17:00 <br>9:00 - 10:00</td>
+                <td>Lecture<br>Lecture</td>
+                <td>WGB G05<br>WGB G05</td>
+                </tr>
+
+                <!--OS-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules-visiting-student/?details&code=CS2503">CS2503</a></td>
+                <td>Operating Systems 1</td>
+                <td>Monday<br>Wednesday</td>
+                <td>14:00 - 15:00<br>11:00 - 12:00</td>
+                <td>Lecture<br>Lecture</td>
+                <td>WGB G03<br>WGB G03</td>
+                </tr>
+    
+                <!--Dance-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules-visiting-student/?details&code=MU2421">MU2421</a></td>
+                <td>Step Dancing 2</td>
+                <td>Wednesday</td>
+                <td>16:00 - 17:00</td>
+                <td>Workshops</td>
+                <td>Music Bldg</td>
+                </tr>
+    
+                </tbody>
+                </table>
+
+            <h2 id="lab_timetable">Lab Timetable</h2>
+            <table cellpadding="4">
+                <tbody><tr>
+                <th>Code</th>
+                <th>Title</th>
+                <th>Weekday</th>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Room Code</th>
+                </tr>
+                <!--Python-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules-visiting-student/?details&code=CS1068">CS1068</a></td>
+                <td>Introductory Programming in Python</td>
+                <td>Wednesday</td>
+                <td>11:00 - 12:00</td>
+                <td>Lab</td>
+                <td>WGB G20</td>
+                </tr>
+                
+                <!--Web Dev-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules/?details&amp;srcdb=2022&amp;code=CS2012">CS2012</a></td>
+                <td>Web Development</td>
+                <td>Wednesday</td>
+                <td>11:00 - 12:00</td>
+                <td>Lab</td>
+                <td>WGB 1.10</td>
+                </tr>
+
+                <!--Stat-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules-visiting-student/?details&code=ST2053">ST2053</a></td>
+                <td>Introduction to Regression Analysis</td>
+                <td>Tuesday</td>
+                <td>17:00 - 18:00</td>
+                <td>Lab</td>
+                <td>WGB G33</td>
+                </tr>
+
+                <!--OS-->
+                <tr>
+                <td><a href="https://ucc-ie-public.courseleaf.com/modules-visiting-student/?details&code=CS2503">CS2503</a></td>
+                <td>Operating Systems 1</td>
+                <td>Monday</td>
+                <td>15:00 - 16:00</td>
+                <td>Lab</td>
+                <td>WGB 1.10</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        
+        <div class="photos">
+            <h2 id="home_photo">Home Photo</h2>
+                <img id="home_pic" src="https://images.unsplash.com/photo-1590802810354-a785c3c50dcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Home Photo">
+                <p class="caption"><strong>My home country</strong></p>
+                <p class="description">Caracas, Venezuela. With a view of El Avila.</p>
+           
+            <h2 id="cork_photo">Cork Photo</h2>
+                <img id="cork_pic" src="https://images.unsplash.com/photo-1576447846642-d10d9c57521a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Cork Photo">
+                <p class="caption"><strong>Cork, Ireland!</strong></p>
+                <p class="description">This is the River Lee.</p>       
+        </div>
+    </div>
+
+</body>
+</html>
